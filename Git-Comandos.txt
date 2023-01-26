@@ -22,8 +22,45 @@ Monitorear cambios del archivo
 git add .
 Monitorear todos los archivos de la carpeta
 
-git rm (nombre del archivo o .)
+git rm --cached (nombre del archivo o .)
 Dejar de monitorear
 
-git commit -m "Creando archivo prueba con listas de uso"
+git commit -m "Creando archivo prueba con listas de uso pruebaGit.html"
 Guardar modificacion en el repositorio de Git, podemos crear un checkpoint o un punto, toca indicar que se modifico
+
+git config --global user.email "nombre de email"
+recibir mensajes
+git config --global user.name "nombre"
+||||||||||||||||||
+|||||||||||||||
+|||||||||||
+Esto es por si el commit fallo 
+
+
+//////////-----------------------NOTA-----------------------//////////
+a tener en cuenta
+git add monitorear todos los cambios
+
+git commit -m "" guardar modificacion
+
+repetir instrucciones
+//////////--------------------------------------------------//////////
+
+Antes de cualquier interacción con git, es necesario informar quién eres para que almacene correctamente los datos del autor de cada uno de los cambios en el código.
+
+En el video no hice mucho hincapié en esto, pero para que puedas hacer esto en tu computadora, si estás comenzando a usar git ahora, simplemente escribe los siguientes comandos (estando en la carpeta del repositorio de git):
+git config --local user.name "Tu nombre aquí"
+git config --local user.email "Tu@email.aqui”
+
+git log
+Historico de modificacion
+
+clear
+limpar pantalla
+
+git log --oneline
+historico resumido
+
+git log -p
+ver modificacion de codigo
+:q para salir del git log -p y similares
