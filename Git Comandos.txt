@@ -1,0 +1,17 @@
+git --version
+Para saber la version de nuestro git
+
+dir
+Visualizacion de carpetas
+
+cd Documents/Oracle-One/8-Git/
+Entrar a la carpeta
+
+ls
+Ver archivos de la carpeta
+
+git init
+Crear un repositorio
+
+git status
+Comando en el git sabe los cambios y estado de los archivos dentro del respositorio
