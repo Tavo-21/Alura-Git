@@ -1,4 +1,4 @@
-git --version
+cdgit --version
 Para saber la version de nuestro git
 
 dir
@@ -64,3 +64,112 @@ historico resumido
 git log -p
 ver modificacion de codigo
 :q para salir del git log -p y similares
+
+$ git log --pretty="format:%H %s"
+
+
+.gitignore
+-Creamos un achivo  manual con ese nombre y dentro colocamos los nombres
+de las carpetas o archivos que quermos ignorar
+
+-Igualmente hacemos un git add y un commit a el archivo .gitignore
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+cd .. salir carpeta
+mkdier (Nombre carepta) crear otra carpeta
+cd (Nombre carpeta)/ entrar en la carpeta
+
+git init --bare
+Este repositorio solo contiene las modificaciones de los archivos
+--¡Opción correcta! Con este comando creamos un repositorio que no 
+tendrá la working tree, o sea, no contendrá una copia de nuestros 
+archivos. Como el repositorio servirá solo como servidor, 
+para que otros miembros del equipo sincronicen sus trabajos, 
+disminuimos espacio de almacenamiento de esta forma.
+
+C:/Users/USUARIO/Documents/Oracle-One/8-ServidorGit/
+Camino del repositorio remoto
+
+Recapitulando en otra carpeta aparte hicimos un servidor remoto y ahora
+es conectar nuestra carpeta local o archivos al servidor remoto para el
+traspaso de informacion y demas. Entonces volvemos a entrar a nuestra
+carpeta que ibamos trabajando
+
+git remote
+Lo que haces es enlistar todos los servidores remotos que nuestro reposi-
+torio conoce
+
+git remote add servidorlocal C:/Users/USUARIO/Documents/Oracle-One/8-ServidorGit/
+Agregar un servidor remoto a nuestro servidor local, para cada repositorio
+que queramos agregar hay que agregar un nombre y agg el camino
+
+git remote -v
+Para saber si ese servidor local en verdad esta apuntando a nuestro ser-
+vidor
+
+Vamos hacer una persona artificial creando otra carpeta y vamos a intentar-
+clonar nuestro respositorio para aquella persona artificial(Ana)
+
+git clone c/Users/USUARIO/Documents/Oracle-One/8-ServidorGit/ Projecto
+Asi clonamos y en la ultima parte damos un espacio y colocamos otro nombre
+ya que asi se llamaria la Projecto y no 8-ServidorGit en la carpeta Ana
+
+//////////////////////////////////////
+/////////////////////////////////////
+
+Sincronizar datos
+
+---git push servidorlocal master
+Vamos a la carpeta donde esta el projecto y luego hacemos git remote para
+ver los servidores, en este caso aparecera nuestro servidorlocal, lo que
+haremos es es empujar los datos que esta en el carpeta al servidor con el
+commando push. La pregunta es hacer desde donde se envia y a donde va. 
+Colacamos el nombre que es sevidorlocal y a la branch que en este caso es 
+master
+
+---git remote
+luego nos vamos a la projecto de la persona en este caso ana y hacemos un 
+git remote y por defecto por git aparece uno (origin)
+
+---git remote rename origin local
+Lo que hicimos fue que gustavo ejemplo o bruno envio datos al servidor
+y ahora ana tiene que traer esos datos al repositorio de ana y entra el
+git remote y posteriormente cambiamos el nombre con local 
+
+---git pull servidorlocal master
+Vamos a agregar servidor local y dentro de ese servidor cual ramo tenemos
+que traer y en este caso es la master. ESTO EN EL MISMO ESPACIO DE ANA
+
+ya luego de esto probamos con ls y ya vemos los archivos correctamente
+
+Hacemos una pruebita en la que ana modifica un poco el archivo
+
+---git push servidorlocal master
+Ahora como hicimos unos cambios(add, commit) vamos a enviar los datos con push para ver
+si bruno pueda ver los cambios
+
+
+Ahora nos vamos a donde bruno
+
+---git pull servidorlocal master
+Lo que hara bruno es traer los datos del servidor ya que Ana modifco ciertas cosas
+
+//////////////////NOTAAAAAAAAAAA//////////////////
+---git push servidorlocal master= Empujar o enviar datos al servidor
+---git pull servidorlocal master= Traer datos del servidor
+
+
+
+                       Esto esta sincronizacion de datos en un 
+                                Servidor Local
+
+
+
+
+
+
+
+
+
+
