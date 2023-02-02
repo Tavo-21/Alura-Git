@@ -96,22 +96,22 @@ es conectar nuestra carpeta local o archivos al servidor remoto para el
 traspaso de informacion y demas. Entonces volvemos a entrar a nuestra
 carpeta que ibamos trabajando
 
-git remote
+-----git remote
 Lo que haces es enlistar todos los servidores remotos que nuestro reposi-
 torio conoce
 
-git remote add servidorlocal C:/Users/USUARIO/Documents/Oracle-One/8-ServidorGit/
+------git remote add servidorlocal C:/Users/USUARIO/Documents/Oracle-One/8-ServidorGit/
 Agregar un servidor remoto a nuestro servidor local, para cada repositorio
 que queramos agregar hay que agregar un nombre y agg el camino
 
-git remote -v
+-------git remote -v
 Para saber si ese servidor local en verdad esta apuntando a nuestro ser-
 vidor
 
 Vamos hacer una persona artificial creando otra carpeta y vamos a intentar-
 clonar nuestro respositorio para aquella persona artificial(Ana)
 
-git clone c/Users/USUARIO/Documents/Oracle-One/8-ServidorGit/ Projecto
+---------git clone c/Users/USUARIO/Documents/Oracle-One/8-ServidorGit/ Projecto
 Asi clonamos y en la ultima parte damos un espacio y colocamos otro nombre
 ya que asi se llamaria la Projecto y no 8-ServidorGit en la carpeta Ana
 
@@ -164,12 +164,39 @@ Lo que hara bruno es traer los datos del servidor ya que Ana modifco ciertas cos
                        Esto esta sincronizacion de datos en un 
                                 Servidor Local
 
+git push [repositorio] master
+
+¡Opción correcta! De esta forma enviamos las modificaciones de 
+nuestra Branch master (hablaremos más sobre branches dentro de poco) 
+hacia el repositorio remoto. Basta con substituir [repositorio] por 
+el nombre que dimos al repositorio al agregarlo. Ahora, para traer 
+los datos que están en el repositorio remoto, podemos utilizar 
+git pull [repositorio] master.
 
 
+/////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
 
+                            Servidores en la Red GITHUB
 
+Creamos un repositorio en GitHub llamado Alura-Git
 
+---git remote add origin https://github.com/Tavo-21/Alura-Git.git
+ese origin es el repositorio remoto principal por defecto, se puede cambiar
+ese oring por otro nombre, este caso la mantenemos
 
+---git branch -M main
+ha sido cambiado recientemente, anteriormente no era necesario utilizar el comando
+para transformar nuestro nombre de la rama master para nuestro main, por ahora
+mantenomos ese master y salteamos este comando
 
+---git push -u origin main
+Ahi le cambiamos por master, esta -u significa que cada que vamos hacer un push
+de nuestra branch master siempre va a ir a origin, en el futuro no seria necesario
+ese -u, y asi, ese -u se puede saltar y colocar el resto del comando igual, es para
+un mejor proceso de estar seguro de lo se esta haciendo
 
+Como resulado vemos que se enviaron los datos a nuestro repositorio en GitHub
+
+ya podemos compartir codigos ya sea local o en la red
 
