@@ -200,3 +200,69 @@ Como resulado vemos que se enviaron los datos a nuestro repositorio en GitHub
 
 ya podemos compartir codigos ya sea local o en la red
 
+/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// Branches ////////////////////////////////////
+
+Veremos el como se trabaja en conjunto dos personas en un archivo, el de nosotros
+y el de ana
+
+---git branch
+Con ese comando sabemos que ramas hay disponible o creadas
+
+El comando git branch te permite crear, enumerar y eliminar ramas, así como 
+cambiar su nombre. No te permite cambiar entre ramas o volver a unir un historial 
+bifurcado. Por este motivo, git branch está estrechamente integrado con los comandos git checkout y git merge 
+
+las ramificaciones para saber en que se esta trabajando
+
+--git branch titulo
+con el ultimo se le asigna un nombre a una nueva branch o rama de trabajo
+
+--git checkout titulo
+Cambiar de branch o entrar a otra rama
+
+https://git-school.github.io/visualizing-git/ buscar en la web
+
+--git checkout -b lista
+Asi podemos con un solo comando crear y cambiar de branch o de raiz
+
+Ahora veremos como llevar el trabajo de una branch a otra en este caso en el 
+servidor local tenemos un branch master y lo que haremos en el caso de nosotros
+y ana, es que cada uno esta trabajando una branch distinta, (titulo, lista) 
+respectivamente y vamos a juntarlas a la principla que es del servidor local
+
+
+Las branches ("ramas") se utilizan para desarrollar funcionalidades aisladas 
+entre sí. La branch master es la branch "predeterminada" cuando creas 
+un repositorio.
+
+Es interesante separar el desarrollo de funcionalidades en diferentes 
+branches, para que los cambios en el código de una no influyan en el funcionamiento de otra.
+
+En esta aula, entenderemos mejor cómo trabajar con estas ramas, pero es 
+muy importante que comprenda su propósito.
+
+En otros cursos aquí en Alura, hablaremos más sobre estrategias para 
+organizar tus branches, entonces no te preocupes tanto por eso ahora. ;-)
+
+
+////////////////////////Uniendo branches////////////////////////////////////////
+
+--git merge titulo
+Este comando es ejecutado desde la rama master
+
+para salir cuando se haya hecho eso es :x y enter. Cuando revisamos con git log
+vemos que se hizo un commit con el siguiente nombre Merge branch 'titulo', ese
+representa los commit de manera global de la rama titulo
+
+
+
+
+
+
+
+
+
+
+
+
