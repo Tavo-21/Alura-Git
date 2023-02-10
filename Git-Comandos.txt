@@ -191,6 +191,7 @@ para transformar nuestro nombre de la rama master para nuestro main, por ahora
 mantenomos ese master y salteamos este comando
 
 ---git push -u origin main
+---git push origin master
 Ahi le cambiamos por master, esta -u significa que cada que vamos hacer un push
 de nuestra branch master siempre va a ir a origin, en el futuro no seria necesario
 ese -u, y asi, ese -u se puede saltar y colocar el resto del comando igual, es para
@@ -255,6 +256,56 @@ para salir cuando se haya hecho eso es :x y enter. Cuando revisamos con git log
 vemos que se hizo un commit con el siguiente nombre Merge branch 'titulo', ese
 representa los commit de manera global de la rama titulo
 
+
+Actualizando branches
+actulizar los commits de master con los commits de titulo para evitar confusiones
+
+--git rebase titulo
+traer todos los commits de titulo y llevarlos antes que master, esto comando se
+ejecuta dentro de la rama master, NOTA hacer el commits de los archivos cambiados
+ya que si se hace solo de uno antes de ejecutar este comando no funcionara
+
+--git log --graph
+Una nueva forma de ver el historial por decirlo de esa manera
+
+Ctrl + c parar la linea
+
+cuando hiciemos el el git merge lista nos sale una serie de conflictos y en el visual
+nos muestra mediante los colores en este caso el verde es el de master y el
+azul es el de lista. Esto en un principio ya que bruno y ana hicieron unos cambios
+respectivamente en sus ramas y cambiaron en la misma linea de codigo
+
+--Ya como nos muestra en visual elegimos con cual nos quedamos, con cual linea
+de codigo ya sea de bruno o de ana, una vez escogido borramos la linea que no
+necesitamos
+
+--Ya que corregimos hacemos un git add al archivo en cuestion, y asi informo a
+a git que corregi lo que tenia que corregir y ya luego leugo hacemos un git commit
+simple. Ya git luego de ver que se corrigio va hacer un git de merge
+
+--salimos con :x y actualiza y guarda el mensaje
+
+--si enviamos codigo mientras ana ya habia enviado apareceran una serie de advertencias por eso
+tenemos que asegurarnos que estamos trabajando con la version mas nueva del codigo lo que tenmos que hacer antes de enviar ya nuestro codigo, es trabajar con la informacion reciente
+en este caso traemos lo que hizo ana con el git pull servidorlocal master y ahora si puedo enviar la modificacion en la que trabajaba
+y ahora si puedo hacer el git push al servidor con master
+
+y hacemos esto tambien con ana
+
+---git config --local user.name "Ana"
+tener encuenta para saber la persona que hace las modificaciones y demas
+
+-------------------------------------------------------------------------------
+En esta parte es hacer Ctrl + z, lo cual es deshaciendo modificaciones
+
+---git restore <file>..." to discard changes in working directory)
+claro esta que esto es ants del git add
+
+--git restore --staged <file>.
+Este seria cuandno ya habiamos colocado el git add y queremos regresar
+
+--git revert y el numero de serie del commit quee queremos revertir
+para salir :x
 
 
 
